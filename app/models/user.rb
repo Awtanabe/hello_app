@@ -1,4 +1,5 @@
 class User < ApplicationRecord
- validates:contene,length:{ maximum:140}
- has_many:microposts
+ has_many :microposts
+ validates :name, presence: true
+ validates :email, presence: true
 end
